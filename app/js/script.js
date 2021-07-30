@@ -44,7 +44,7 @@ function createSlideshow(images) {
   `
   currentPosition += 2
   if (images.length == 2) currentPosition = 0
-  timer = setInterval(nextSlide, 3000)
+  timer = setInterval(nextSlide, 6000)
   } else {
     document.getElementById("slideshow").innerHTML = `
   <div class="slide" style="background-image: url('${images[0]}')"></div>
@@ -56,7 +56,7 @@ function createSlideshow(images) {
     document.getElementById("slideshow").insertAdjacentHTML("beforeend", `<div class="slide" style="background-image: url('${images[currentPosition]}')"></div>`)
     deleteFirstPhotoDelay = setTimeout(function () {
       document.querySelector(".slide").remove()
-    }, 1000)
+    }, 5000)
     if (currentPosition + 1 >= images.length) {
       currentPosition = 0
     } else {
